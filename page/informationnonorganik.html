@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGreen.Cycle</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />   
+    <style>
+      button{
+        padding: 12px 15px; 
+        margin-left: 12px;
+        font-size: 1rem; 
+        background-color: rgb(14, 80, 14);
+        color: whitesmoke; 
+        border-radius: 20px; 
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+      button:hover{
+        transform: scale(1.1);
+      }
+      .button2{
+        padding: 10px 50px; 
+        margin-left: 12px;
+        font-size: 1rem; 
+        background-color: rgb(87, 133, 36);
+        color: whitesmoke; 
+        border-radius: 20px; 
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+      .button2:hover{
+        transform: scale(1.1);
+      }
+@media screen and (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button2 {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button2 {
+    font-size: 0.8rem;
+    padding: 6px 15px;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+
+  th, td {
+    font-size: 0.8rem;
+    padding: 4px;
+  }
+}
+.containerr {
+        max-width: 1170px;
+        margin: auto;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      ul {
+        list-style: none;
+      }
+      .footer {
+        background-color: #133917;
+        padding: 15px 0;
+      }
+      .footer-col {
+        width: 25%;
+        padding: 0 15px;
+      }
+      .footer-col h4 {
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        font-weight: 500;
+        position: relative;
+        margin-top: 0;
+      }
+      .footer-col h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: goldenrod;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
+      .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      .footer-col ul li a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+      }
+      .footer-col ul li a:hover {
+        color: #ffffff;
+        padding-left: 8px;
+      }
+      .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+      }
+      .footer-col .social-links a:hover {
+        color: #24262b;
+        background-color: #ffffff;
+      }
+
+      @media (max-width: 767px) {
+        .footer-col {
+          width: 50%;
+          margin-bottom: 30px;
+        }
+      }
+      @media (max-width: 574px) {
+        .footer-col {
+          width: 100%;
+        }
+      }
+
+    </style>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navigasi">
+    <div class="navbar">
+      <a href="asset/img/gogreen.svg" class="logo">EcoGreen<span style="color: goldenrod;">.Cycle</span></a>
+      <ul class="menu-navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="information.html">Information</a></li>
+      <li><a href="else.html">Program</a></li>
+      <li><a href="kritik.html">Kritik & Saran</a></li>
+
+      </ul>
+      <div class="tombol">&#9776;</div>
+    </div>
+  </nav>
+  <section style="margin-top: 100px;">
+  <h2 class="h2tabel" id="atas">Pemilahan sampah Non Organik</h2><br>
+  <div style="display: flex;justify-content: center;text-align: center;">
+  <a href="#plastik"><button class="button2">Sampah Plastik</button></a>  
+  <a href="#kertas"><button class="button2">Sampah Kertas</button></a>  
+  <a href="#logam"><button class="button2">Sampah Logam</button></a>  
+  <a href="#kaca"><button class="button2">Sampah Kaca</button></a>  
+</div>
+<br><br><br><br>
+<hr>
+  <h3 style="text-align: center; font-size: 1.7rem;margin-top: 0;" id="plastik">Sampah Plastik</h3>
+    <div class="containerimage">
+      <div class="img1">
+        <img src="../asset/img/botolplastik.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N1
+          </h3>
+          <h4>Botol Plastik</h4>
+          <p>Botol plastik PET kemasan air mineral (bening + berwarna) bebas dari tutup botol </p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/kresek.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N2
+          </h3>
+          <h4>Plastik Kresek</h4>
+          <p>Plastik HD lembaran dan kantong plastik kresek</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/styrofoam.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N3
+          </h3>
+          <h4>Styrofoam</h4>
+          <p>Styrofoam bekas elektronik , putih bersih</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/plastikkemasan.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+           N4
+          </h3>
+          <h4>Plastik Kemasan</h4>
+          <p>Puch Minyak, kemasan multilayer (Bungkus snavk dll) </p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/tutupbotol.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N5
+          </h3>
+          <h4>Tutup Botol</h4>
+          <p>Tutup botol air minum yang berwarna (selain warna hitam)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="tabel">
+    <table class="tabel-harga">
+      <!-- kepala / atasnya tabel -->
+      <thead>
+        <!-- tr is table row jadi list ke sampingnya -->
+         <tr>
+          <!-- th adalah isinya table itu -->
+           <th> No</th>
+           <th>Jenis Sampah</th>
+           <th>Satuan</th>
+          <th>Code</th>
+          <th> Deskripsi</th>
+          <th>Harga</th>
+         </tr>
+      </thead>
+      <!-- tbody untuk bagian badannya table -->
+       <tbody>
+       <tr>
+        <td>1</td>
+        <td>Botol Plastik</td>
+        <td>KG</td>
+        <td>N1</td>
+        <td>Botol plastik PET kemasan air mineral (bening + berwarna) bebas dari tutup botol </td>
+        <td> Rp.2000</td>
+       </tr>
+       <!-- untuk bikin lagi tinggal bikin row baru yaitu tr -->
+        <tr>
+          <td>2</td>
+          <td>Plastik Kresek</td>
+          <td>KG</td>
+          <td>N2</td>
+          <td>Plastik HD lembaran dan kantong plastik kresek</td>
+          <td>Rp.500</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Styrofoam</td>
+          <td>KG</td>
+          <td>N3</td>
+          <td>Styrofoam bekas elektronik , putih bersih</td>
+          <td>Rp.4000</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Plastik Kemasan</td>
+          <td>KG</td>
+          <td>N4</td>
+          <td>Puch Minyak, kemasan multilayer (Bungkus snack dll) </td>
+          <td>Rp.5000</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Tutup Botol</td>
+          <td>KG</td>
+          <td>N5</td>
+          <td>Tutup botol air minum yang berwarna (selain warna hitam)</td>
+          <td>Rp.3500</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+   <br><br>
+   <a href="formnon.html"><button>Isi Formulir Penjualan</button></a>  
+   <a href="ajuan.html"><button >Ajukan Penjualan</button></a>  
+   <a href="#atas"><button >Ke atas</button></a>   </section>
+  <br>
+  <h3 style="text-align: center; font-size: 1.7rem;margin-top: 0;">Sampah Kertas</h3>
+    <div class="containerimage" id="kertas">
+      <div class="img1">
+        <img src="../asset/img/arsip.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N7
+          </h3>
+          <h4>Kertas Arsip</h4>
+          <p>HVS, Buku tulis berbahan hvs tanpa cover</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/tetrapack.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N8
+          </h3>
+          <h4>Tetra Pack</h4>
+          <p>Kemasan susu, teh kotak dan lain lain</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/koran.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N9
+          </h3>
+          <h4>Koran</h4>
+          <p>Koran yang masih bagus/eksemplar</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/kardus.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+           N10
+          </h3>
+          <h4>Dus / Kardus</h4>
+          <p>Kardus bekas yang terlipat</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/campur.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N11
+          </h3>
+          <h4>Kertas Campur</h4>
+          <p>Sampah jenis kertas campur (Arsip,duplek,karton,kertas,buram,dus,buku dengan cover atau buku utuh)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="tabel">
+
+    <table class="tabel-harga">
+      <!-- kepala / atasnya tabel -->
+      <thead>
+        <!-- tr is table row jadi list ke sampingnya -->
+         <tr>
+          <!-- th adalah isinya table itu -->
+           <th> No</th>
+           <th>Jenis Sampah</th>
+           <th>Satuan</th>
+          <th>Code</th>
+          <th> Deskripsi</th>
+          <th>Harga</th>
+         </tr>
+      </thead>
+      <!-- tbody untuk bagian badannya table -->
+       <tbody>
+       <tr>
+        <td>1</td>
+        <td>Kertas arsip</td>
+        <td>KG</td>
+        <td>N7</td>
+        <td>HVS, Buku tulis berbahan hvs tanpa cover</td>
+        <td> Rp.1700</td>
+       </tr>
+       <!-- untuk bikin lagi tinggal bikin row baru yaitu tr -->
+        <tr>
+          <td>2</td>
+          <td>Tetra Pack</td>
+          <td>KG</td>
+          <td>N8</td>
+          <td>Kemasan susu, teh kotak dan lain lain</td>
+          <td>Rp.1000</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Koran</td>
+          <td>KG</td>
+          <td>N9</td>
+          <td>Koran yang masih bagus/eksemplar</td>
+          <td>Rp.5000</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Dus / Kardus</td>
+          <td>KG</td>
+          <td>N10</td>
+          <td>Kardus bekas yang terlipat</td>
+          <td>Rp.2000</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Kertas Campur</td>
+          <td>KG</td>
+          <td>N11</td>
+          <td>Sampah jenis kertas campur (Arsip,duplek,karton,kertas,buram,dus,buku dengan cover atau buku utuh)</td>
+          <td>Rp.1000</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+   <br><br>
+   <a href="formnon.html"><button >Isi Formulir Penjualan</button></a>  
+   <a href="ajuan.html"><button >Ajukan Penjualan</button></a>  
+   <a href="#atas"><button >Ke atas</button></a>   </section>
+  <br>
+  <h3 style="text-align: center; font-size: 1.7rem;margin-top: 0;">Sampah Logam</h3>
+    <div class="containerimage" id="logam">
+      <div class="img1">
+        <img src="../asset/img/seng.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N12
+          </h3>
+          <h4>Seng</h4>
+          <p>Seng lembaran, kaleng susu, kaleng sarden, kalung bekas, pewangi ruangan</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/besi.svg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N13
+          </h3>
+          <h4>Besi</h4>
+          <p>Besi, besi berkarat, paku, besi rel, tong, rangka motor, pelek, drum bekas dan lain lainnya.</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/alumunium.jpg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N14
+          </h3>
+          <h4>Alumunium</h4>
+          <p>Kaleng minuman alumunium, panci dan lain lain</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/pipa.jpg" alt="">
+        <div class="card-contentinf">
+          <h3>
+           N15
+          </h3>
+          <h4>Tembaga</h4>
+          <p>Kawat Tembaga lilit, pipa tembaga, serpihan tembaga dll</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="tabel">
+
+    <table class="tabel-harga">
+      <!-- kepala / atasnya tabel -->
+      <thead>
+        <!-- tr is table row jadi list ke sampingnya -->
+         <tr>
+          <!-- th adalah isinya table itu -->
+           <th> No</th>
+           <th>Jenis Sampah</th>
+           <th>Satuan</th>
+          <th>Code</th>
+          <th> Deskripsi</th>
+          <th>Harga</th>
+         </tr>
+      </thead>
+      <!-- tbody untuk bagian badannya table -->
+       <tbody>
+       <tr>
+        <td>1</td>
+        <td>Seng</td>
+        <td>KG</td>
+        <td>N12</td>
+        <td>Seng lembaran, kaleng susu, kaleng sarden, kalung bekas, pewangi ruangan.</td>
+        <td> Rp.1900</td>
+       </tr>
+       <!-- untuk bikin lagi tinggal bikin row baru yaitu tr -->
+        <tr>
+          <td>2</td>
+          <td>Besi</td>
+          <td>KG</td>
+          <td>N13</td>
+          <td>Besi, besi berkarat, paku, besi rel, tong, rangka motor, pelek, drum bekas dan lain lainnya.</td>
+          <td>Rp.3500</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Alumunium</td>
+          <td>KG</td>
+          <td>N14</td>
+          <td>Kaleng minuman alumunium, panci dan lain lain</td>
+          <td>Rp.9000</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Tembaga</td>
+          <td>KG</td>
+          <td>N15</td>
+          <td>Kawat Tembaga lilit, pipa tembaga, serpihan tembaga dll</td>
+          <td>Rp.39000</td>
+        </tr>
+      </tbody>
+    </table>
+
+   <br><br>
+   <a href="formnon.html"><button >Isi Formulir Penjualan</button></a>  
+   <a href="ajuan.html"><button >Ajukan Penjualan</button></a>  
+   <a href="#atas"><button >Ke atas</button></a>   </section>
+  <br>
+  <h3 style="text-align: center; font-size: 1.7rem;margin-top: 0;">Sampah Kaca</h3>
+    <div class="containerimage" id="kaca">
+      <div class="img1">
+        <img src="../asset/img/beling.jpg" alt="">
+        <div class="card-contentinf">
+          <h3>
+            N16
+          </h3>
+          <h4>Beling</h4>
+          <p>Pecahan kaca, gelas, piring beling botol sirup, coca-cola dll</p>
+        </div>
+      </div>
+      <div class="img1">
+        <img src="../asset/img/kaca.jpg" alt="">
+        <div class="card-contentinf">
+          <h3>
+          N17
+          </h3>
+          <h4>Botol Kaca</h4>
+          <p>Botol bir bintang atau botol bir lainnya dengan ukuran besar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="tabel">
+
+    <table class="tabel-harga">
+      <!-- kepala / atasnya tabel -->
+      <thead>
+        <!-- tr is table row jadi list ke sampingnya -->
+         <tr>
+          <!-- th adalah isinya table itu -->
+           <th> No</th>
+           <th>Jenis Sampah</th>
+           <th>Satuan</th>
+          <th>Code</th>
+          <th> Deskripsi</th>
+          <th>Harga</th>
+         </tr>
+      </thead>
+      <!-- tbody untuk bagian badannya table -->
+       <tbody>
+       <tr>
+        <td>1</td>
+        <td>Beling</td>
+        <td>KG</td>
+        <td>N16</td>
+        <td>Pecahan kaca, gelas, piring beling botol sirup, coca-cola dll</td>
+        <td> Rp.13000</td>
+       </tr>
+       <!-- untuk bikin lagi tinggal bikin row baru yaitu tr -->
+        <tr>
+          <td>2</td>
+          <td>Botol Kaca</td>
+          <td>KG</td>
+          <td>N17</td>
+          <td>Botol bir bintang atau botol bir lainnya dengan ukuran besar</td>
+          <td>Rp.14000</td>
+        </tr>
+      </tbody>
+    </table>
+
+   <br><br>
+   <a href="formnon.html"><button >Isi Formulir Penjualan</button></a>  
+   <a href="ajuan.html"><button >Ajukan Penjualan</button></a>  
+   <a href="#atas"><button >Ke atas</button></a>   </section>
+  <br>
+  <footer class="footer">
+    <div class="containerr">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Our Company</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About us</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a href="else.html">Program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="kritik.html">Kritik & saran</a></li>
+            <!-- <li><a href="#">Form Penjualan organik</a></li> -->
+            <li><a href="form.html">Form Organik</a></li>
+            <li><a href="formnon.html">Form Anorganik</a></li>
+            <li><a href="ajuan.html">Form Pengajuan</a></li> 
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informasi</h4>
+          <ul>
+            <li><a href="information.html">Informasi lengkap</a></li>
+            <li><a href="informationorganik.html">Daftar Organik</a></li>
+            <li><a href="informationnonorganik.html">Daftar Anorganik</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <box-icon type='solid' name='upvote' class="icon" size="lg"></box-icon>
+  <script type="text/javascript">
+    const tombol = document.querySelector(".tombol");
+    const menu = document.querySelector(".menu-navbar");
+
+    tombol.addEventListener("click",() =>{
+      menu.classList.toggle("aktif");
+      document.querySelector('#about').scrollIntoView({
+  behavior: 'smooth'
+});
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGreen.Cycle</title>
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../else.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .wrapper {
+    width: 100%;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.icon{
+  width: 50px;
+  height: 50px;
+}
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.front img{
+  width: 100%;
+  height: 100%;
+}
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('../asset/img/poster1.png');
+}
+.card[for="c2"] {
+    background-image: url('../asset/img/poster2.png');
+}
+.card[for="c3"] {
+    background-image: url('../asset/img/poster3.png');
+}
+.card[for="c4"] {
+    background-image: url('../asset/img/poster4.png');
+}
+.card[for="c5"] {
+    background-image: url('../asset/img/poster5.png');
+}
+h2{
+  margin-top: 120px;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #133917;
+}
+h3{
+  font-size: 1rem;
+  text-align: center;
+
+}
+.container2{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 100px;
+}
+    </style>
+</head>
+<body>
+  <nav class="navigasi">
+    <div class="navbar">
+      <a href="asset/img/gogreen.svg" class="logo">EcoGreen<span style="color: goldenrod;">.Cycle</span></a>
+      <ul class="menu-navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="information.html">Information</a></li>
+      <li><a href="else.html">Program</a></li>
+      <li><a href="kritik.html">Kritik & Saran</a></li>
+
+      </ul>
+      <div class="tombol">&#9776;</div>
+    </div>
+  </nav>
+  <h2>Ikuti Keseruan Program Adiwiyata Kami 🤩</h2>
+  <div class="cardd">
+  <div class="animated_card">
+    <div class="isi">
+    <img src="../asset/img/funrace.webp" alt="">
+    </div>
+    <div class="isitext">
+    <p style="z-index: 1;">Eco-Fun Race: Perlombaan edukatif tentang lingkungan dengan berbagai tantangan, seperti kuis, memilah sampah, dan membuat kerajinan dari barang bekas. belajar sambil bermain untuk meningkatkan kesadaran lingkungan.</p>
+  </div>
+  </div>
+  <div class="animated_card">
+    <div class="isi">
+    <img src="../asset/img/greenmarket.webp" alt="">
+    </div>
+    <div class="isitext">
+      <p style="z-index: 1;">Green Market Day: Pasar hijau yang menjual produk ramah lingkungan hasil Adiwiyata, seperti kompos, kerajinan daur ulang, dan bibit tanaman, mengajarkan kewirausahaan sekaligus mempromosikan gaya hidup hijau.</p>
+    </div>
+  </div>
+  <div class="animated_card">
+    <div class="isi">
+    <img src="../asset/img/fashoin.webp" alt="">
+    </div>
+    <div class="isitext">
+      <p style="z-index: 1;">Trash-to-Treasure Fashion Show: Pertunjukan mode dengan pakaian kreatif dari barang bekas seperti koran dan plastik. Acara ini membuktikan bahwa sampah dapat diubah menjadi karya seni.</p>
+    </div>
+  </div>
+  <div class="animated_card">
+    <div class="isi">
+    <img src="../asset/img/greenday.webp" alt="">
+    </div>
+    <div class="isitext">
+      <p style="z-index: 1;">Green Day Challenge: Zero Waste Edition: Satu hari penuh tanpa menghasilkan sampah dengan membawa peralatan ramah lingkungan untuk melatih gaya hidup nol sampah melalui praktik sederhana sehari-hari.</p>
+    </div>
+  </div>
+</div>
+<p style="text-align: center;margin-top: 50px;">Daftarkan dirimu sekarang! <a href="contact.html">Klik disini</a></p>
+<br>
+<hr style="z-index: 100;">
+  <h2 style="margin-top: 50px;">Poster Adiwiyata 🌳</h2>
+<div class="wrapper">
+  <div class="container">
+      <input type="radio" name="slide" id="c1" checked>
+      <label for="c1" class="card">
+          <div class="row">
+              <div class="icon">1</div>
+          </div>
+      </label>
+      <input type="radio" name="slide" id="c2" >
+      <label for="c2" class="card">
+          <div class="row">
+              <div class="icon">2</div>
+          </div>
+      </label>
+      <input type="radio" name="slide" id="c3" >
+      <label for="c3" class="card">
+          <div class="row">
+              <div class="icon">3</div>
+          </div>
+      </label>
+      <input type="radio" name="slide" id="c4" >
+      <label for="c4" class="card">
+          <div class="row">
+              <div class="icon">4</div>
+          </div>
+      </label>
+      <input type="radio" name="slide" id="c5" >
+      <label for="c5" class="card">
+          <div class="row">
+              <div class="icon">5</div>
+          </div>
+      </label>
+  </div>
+</div>
+<h2 style="margin-top: 50px;">Yuk Kenali jenis-jenis sampah!</h2>
+<div class="container2">
+<div class="card-containerelse">
+  <div class="cardelse">
+    <div class="front">
+<img src="../asset/img/7.png" alt="">    
+</div>
+    <div class="back" style="background-color: red;">
+      <h3>Sampah B3 :<br>
+        Sampah B3 adalah limbah bahan berbahaya dan beracun yang dapat membahayakan kesehatan manusia dan lingkungan. Contohnya adalah baterai bekas, limbah medis, dan bahan kimia. Penanganan sampah ini memerlukan perlakuan khusus sesuai aturan keselamatan.</h3>
+    </div>
+  </div>
+</div>
+<div class="card-containerelse">
+  <div class="cardelse">
+    <div class="front">
+      <img src="../asset/img/6.png" alt="">    
+    </div>
+    <div class="back" style="background-color: yellow;">
+      <h3 style="color: black;">Sampah Non-Organik :<br>
+        Sampah non-organik adalah limbah yang berasal dari bahan buatan atau yang sulit terurai secara alami, seperti plastik, kaca, logam, dan kertas. Sampah jenis ini sering didaur ulang untuk mengurangi dampak pencemaran lingkungan dan menghemat sumber daya.
+        
+        </h3>
+    </div>
+  </div>
+</div>
+<div class="card-containerelse">
+  <div class="cardelse">
+    <div class="front">
+      <img src="../asset/img/8.png" alt="">    
+    </div>
+    <div class="back">
+      <h3>Sampah Organik :<br>
+        Sampah organik adalah limbah yang berasal dari bahan-bahan alami seperti tumbuhan dan hewan yang mudah terurai oleh mikroorganisme. Contohnya termasuk sisa makanan, daun kering, dan kulit buah. Sampah ini bisa diolah menjadi kompos yang bermanfaat untuk menyuburkan tanah.</h3>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  document.querySelectorAll('.button').forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault(); // Mencegah scroll otomatis ke ID slider
+      
+      // Ambil target slider ID
+      const targetId = event.target.getAttribute('data-target');
+      const targetElement = document.getElementById(targetId);
+
+      // Scroll manual ke slider yang dipilih tanpa auto-scroll ke bawah
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest', // Tetap di posisi elemen
+        inline: 'center'
+      });
+    });
+  });
+</script>
+
+<script
+type="module"
+src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+nomodule
+src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="../script.js"></script>
+  <script type="text/javascript">
+    const tombol = document.querySelector(".tombol");
+    const menu = document.querySelector(".menu-navbar");
+
+    tombol.addEventListener("click",() =>{
+      menu.classList.toggle("aktif");
+      document.querySelector('#about').scrollIntoView({
+  behavior: 'smooth'
+});
+    });
+  </script>
+  
+</body>
+</html>

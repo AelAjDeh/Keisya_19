@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGreen.Cycle</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body style="background-color: whitesmoke;">
+  <nav class="navigasi">
+    <div class="navbar">
+      <a href="asset/img/gogreen.svg" class="logo">EcoGreen<span style="color: goldenrod;">.Cycle</span></a>
+      <ul class="menu-navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="information.html">Information</a></li>
+      <li><a href="else.html">Else</a></li>
+      <li><a href="kritik.html">Kritik & Saran</a></li>
+
+      </ul>
+      <div class="tombol">&#9776;</div>
+    </div>
+  </nav>
+  <section class="form">
+    <h2>Formulir <span style="color: goldenrod;">Penjualan</span></h2>
+    <p style="font-weight: 500;">Disclaimer : Mohon lakukan penjualan terpisah pada masing-masing sampah <br>Satu penjualan berisi satu jenis sampah</p>
+    <form action="result.html" method="post" class="form-sewa">
+      <div class="form-group">
+        <label for="nama"  >Nama Penjual : </label>
+        <input type="text" name="nama" id="nama" required placeholder="Enter Full Name">
+      </div>
+      <div class="form-group">
+        <label for="telp" >No Telp : </label>
+        <input type="number" name="telp" id="panggilan" required placeholder="Example +628953603xxxx">
+      </div>
+      <div class="form-group">
+        <label for="email" >Alamat Email : </label>
+        <input type="email" name="email" id="email" required placeholder="Example 23@xxxxx.gmail.com">
+      </div>
+      <div class="form-group">
+        <label for="alamat">Alamat Lengkap :</label>
+          <textarea name="alamat" id="alamat" placeholder="Enter Address" required></textarea required>
+      </div>
+      <div class="form-group">
+        <label for="organik">Sampah organik : </label>
+        <select name="organik">
+          <option value="-">-</option>
+          <option value="01">Sisa makanan Rp.5000</option>
+          <option value="02">Daun Kering Rp.3500</option>
+          <option value="03">Sisa Sayuran Rp.4500</option>
+          <option value="04">Kulit Buah Rp.4000</option>
+          <option value="05">Kayu Rp.6000</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="jumlah">Jumlah per KG :</label>
+        <input type="number" name="jumlah" required>
+      </div>
+      <div class="form-group">
+      <label for="metode-pembayaran">Metode Pembayaran : </label><br>
+
+      <input type="radio" id="cash" name="metode-pembayaran" value="Cash" required>
+      <label for="cash">Cash</label><br>
+
+      <input type="radio" id="transfer" name="metode-pembayaran" value="Transfer Bank" required>
+      <label for="transfer">Transfer E-Wallet</label><br>
+
+      </div><br>
+      <div class="form-group">
+        <label for="durasi" >Tambahan :</label><br>
+        <input type="text" name="durasi" placeholder="Isi jika ada pesan tambahan">
+      </div><br>
+      <input type="checkbox" id="persetujuan" name="persetujuan" value="setuju" required>
+    <label for="persetujuan">Saya setuju dengan Syarat & Ketentuan yang berlaku</a></label>
+    <br><br><br>
+      <div class="form-group">
+       <input type="submit" name="sub" id="sub" value="Kirim Formulir" class="kirim" >
+        <input type="reset" name="res" id="res" value="Reset Formulir" class="reset">
+      </div>
+    </form>
+  </section>
+  <br><br>
+  <box-icon type='solid' name='upvote' class="icon" size="lg"></box-icon>
+  <script type="text/javascript">
+    const tombol = document.querySelector(".tombol");
+    const menu = document.querySelector(".menu-navbar");
+
+    tombol.addEventListener("click",() =>{
+      menu.classList.toggle("aktif");
+      document.querySelector('#about').scrollIntoView({
+  behavior: 'smooth'
+});
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+  <script type="text/javascript">
+  const form = document.querySelector(".form-sewa");
+  
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Mencegah form di-submit secara default
+
+    // Ambil data dari form
+    const nama = document.getElementById("nama").value;
+    const telp = document.getElementById("panggilan").value;
+    const email = document.getElementById("email").value; // Nama ID harus 'email'
+    const alamat = document.getElementById("alamat").value;
+    const organik = document.querySelector("select[name='organik']").value;
+    const jumlah = document.querySelector("input[name='jumlah']").value; // Nama input harus 'jumlah'
+    const metodePembayaran = document.querySelector("input[name='metode-pembayaran']:checked").value;
+
+    // Simpan data ke localStorage
+    localStorage.setItem("nama", nama);
+    localStorage.setItem("telp", telp);
+    localStorage.setItem("email", email);
+    localStorage.setItem("alamat", alamat);
+    localStorage.setItem("organik", organik);
+    localStorage.setItem("jumlah", jumlah);
+    localStorage.setItem("metodePembayaran", metodePembayaran);
+
+    // Redirect ke halaman result.html
+    window.location.href = "result.html";
+});
+
+  </script>
+</body>
+</html>

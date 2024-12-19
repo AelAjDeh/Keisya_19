@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGreen.Cycle</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+  body{
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+  }
+  .containerresult{
+    justify-content: center;
+    display: flex;
+  }
+  li{
+    list-style: none;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 40px;
+  }
+ h2{
+    font-size: 3.3rem;
+    margin : 0;
+    color: #133917;
+    margin-top: 50px;
+  }
+  .hasil-form{
+  background-color: whitesmoke;
+    border: 3px solid #133917;
+    width: 20cm;
+    margin-top: 50px;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  .hasil-form:hover{
+    background-color: rgb(87, 133, 36);
+    color: whitesmoke;
+  }
+  .hasil-form p{
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  .hasil-form p:hover{
+    color: whitesmoke;
+  }
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<h2>Terima Kasih <span style="color: goldenrod; " id="nama-output"></span> !</h2>
+
+<div class="containerresult">
+  <section class="hasil-form">
+   <p style="font-size: 1.4rem;">Berikut Struk Penjualan anda 😊</p><br>
+    <ul>
+      <li><strong>Nama Penyewa:</strong> <span id="nama"></span></li>
+      <li><strong>No. Telepon:</strong> <span id="telp"></span></li>
+      <li><strong>Email:</strong> <span id="email"></span></li>
+      <li><strong>Alamat:</strong> <span id="alamat"></span></li>
+      <li><strong>Sampah Organik :</strong> <span id="organik"></span></li>
+      <li><strong>Jumlah per KG :</strong> <span id="jumlah"></span></li>
+      <li><strong>Metode Pembayaran:</strong> <span id="metode-pembayaran"></span></li>
+    </ul><br>
+    <p>Informasi lebih lanjut akan kami kirimkan lewat email :)</p>
+    <a href="information.html"><button style="margin-bottom: 15px;" class="btn-primary">Kembali ke Beranda</button></a>
+  </section>
+</div>
+<br><br><br>
+  <script>
+    // Ambil data dari localStorage
+    document.getElementById("nama").textContent = localStorage.getItem("nama");
+    document.getElementById("telp").textContent = localStorage.getItem("telp");
+    document.getElementById("email").textContent = localStorage.getItem("email");
+    document.getElementById("alamat").textContent = localStorage.getItem("alamat");
+    document.getElementById("organik").textContent = localStorage.getItem("organik");
+    document.getElementById("jumlah").textContent = localStorage.getItem("jumlah");
+    document.getElementById("metode-pembayaran").textContent = localStorage.getItem("metodePembayaran");
+
+    document.getElementById("nama-output").textContent = localStorage.getItem("nama");
+  </script>
+</body>
+</html>

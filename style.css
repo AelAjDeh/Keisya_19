@@ -1,0 +1,473 @@
+body{
+margin: 0;
+margin-top: 0;
+font-family: "Poppins", sans-serif;
+background-color: whitesmoke;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+html{
+  scroll-behavior: smooth;
+}
+.navigasi {
+    background: #133917;
+    padding: 20px 30px;
+    margin: 0;
+    height: 40px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1999; 
+    top: 0; 
+}
+
+.navbar img{
+  width: 100px;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  text-decoration: none;
+  font-weight: bolder;
+  color: whitesmoke;
+  font-size: 2rem;
+  transition: all 0.2s;
+}
+.logo:hover{
+  opacity: 0.7;
+}
+.menu-navbar{
+  display: flex;
+  margin: 0;
+  display: 0;
+  list-style: none;
+}
+.menu-navbar li a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+.menu-navbar li{
+  padding: 0;
+  margin-right: 10px;
+}
+.menu-navbar li a:hover{
+cursor: pointer;
+transform: scale(1.12);
+background-color: rgba(0, 128, 0, 0.4);
+border-radius: 12px;
+padding-left: 13px;
+padding-right: 13px;
+}
+.tombol{
+  color: whitesmoke;
+  display: none;
+  size: 14pt;
+}
+.tombol:hover{
+  cursor: pointer;
+}
+@media screen and (max-width: 900px)
+{
+  .menu-navbar{
+    /* agar tampilan menunya ilang */
+    display: none;
+  }
+  .tombol{
+    /* agar si tombol muncul */
+    display: block;
+  }
+  .menu-navbar.aktif{
+    /* mengaktifkan tombol hamburger */
+    display: inline-block; 
+    /* untuk menampilkan si menu */
+    position: fixed;
+    /* agar menu tidak geser geser */
+    top: 64px;
+    background: rgba(1, 44, 1, 0.76);
+    padding: 10px 20px;
+    right: 0;
+    left: 0;
+    /* layer, agar dia tidak ketumpukan  */
+    z-index: 10px;
+    border: 1px solid black;
+  }
+  .menu-navbar.aktif li a{
+    padding: 10px;
+    /* Memastikan elemen a tampil dalam bentuk inline-block (satu baris) !important ini memberi prioritas tinggi pada aturan ini. */
+    display: inline-block!important;
+    color: white;
+  }
+}
+.btn-primary{
+  background:whitesmoke;
+  color: #153930;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 10px;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 700;
+}
+.btn-primary:hover{
+  color:whitesmoke;
+  background: #153930;
+  cursor: pointer;
+}
+.btn-primary:active{
+  opacity: 0.6;
+}
+.welcome-section{
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('asset/img/welcomebg.svg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.welcome-section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 1, 0.5);
+}
+.welcome-text{
+  position: relative;
+  color: whitesmoke;
+  z-index: 1;
+  text-align: center;
+}
+.welcome-text h1{
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+.welcome-text p{
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.tentang{
+  display: flex;
+  align-items: center;
+  height: 550px;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: whitesmoke;  
+}
+.image{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.image img{
+  max-width: 100%;
+  max-height: 12cm;
+  width: 12cm;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+.tentang-text{
+  flex:1;
+  padding: 20px;
+  margin-left:30px ;
+}
+.tentang-text h2{
+  font-size: 48px;
+  color: #7caf2c;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-shadow: 2px 2px 2px #133917;
+}
+.tentang-text p{
+font-size: 1.2rem;
+color: black;
+line-height: 1.6;
+}
+.tentang-text h4{
+color: grey;
+line-height: 1.6;
+font-weight:bold;
+font-style: italic;
+font-size: 1.2rem;
+margin-bottom: 12px;
+text-align: left;
+margin-left: 0;
+}
+.more{
+  display: flex;
+  align-items: center;
+  height: 500px;
+  padding: 20px;
+  justify-content: space-between;
+}
+.image2{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.image2 img{
+  max-width: 100%;
+  max-height: 12cm;
+  height: auto;
+  border-radius: 100px;
+  box-shadow: 3px 3px black;
+  border:3px solid grey;
+  width: 12cm;
+}
+.more-text{
+  text-align: center;
+  flex:1;
+  padding: 20px;
+  margin-left:30px ;
+}
+.more-text h2{
+  font-size: 2.5rem;
+  color: goldenrod;
+  margin-bottom: 20px;
+}
+.more-text p{
+font-size: 1.2rem;
+color: rgb(0, 0, 0);
+line-height: 1.6;
+}
+.more-text h4{
+  color: grey;
+line-height: 1.6;
+font-weight:bold;
+font-style: italic;
+font-size: 1.2rem;
+margin-bottom: 12px;
+text-align: left;
+margin-left: 0;
+}
+.car{
+  padding: 50px;
+  padding-top: 20px;
+  text-align: center;
+  margin: 0;
+}
+#car-judul{
+  font-size: 2.2rem;
+  color: whitesmoke;
+
+}
+.produk-container{
+  /* agar baris sejajar */
+  display: flex;
+  /* menyebar elemen merata dan memberi spasi setiap elemen dengan rata */
+  justify-content: space-between;
+  /* Jika semua elemen tidak cukup muat dalam satu baris, mereka akan otomatis pindah ke baris berikutnya. */
+  flex-wrap: wrap;
+  /* width: 100px; */
+}
+.produk-card{
+  background-color: rgb(153, 151, 151);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px gray;
+  width: 480px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.4s;
+  }
+.produk-card img{
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.4s;
+  object-fit: cover;
+  height: 300px;
+  }
+.produk-card:hover{
+    transform: scale(1.1);
+  }
+.produk-card h3{
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color:whitesmoke;
+}
+#card1{
+  background: #7caf2c;
+  cursor: pointer;
+}
+#card2{
+  background: goldenrod;
+  cursor: pointer;
+}
+.produk-card P{
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.h2tabel{
+  margin-top: 100cm;
+  text-align: center; /* Ini mengatur teks agar berada di tengah */
+  margin: 20px 0; /* Tambahkan jarak atas dan bawah */
+  font-size: 2.2rem; /* Atur ukuran teks */
+  color:  #133917;
+  ;
+}
+.tabel{
+  padding: 60px;
+  text-align: center;
+  margin-top: 100px;
+  margin-top: 0;
+
+}
+.tabel-harga thead tr th{
+  background-color: rgb(13, 54, 13);
+  color: whitesmoke;
+}
+.tabel-harga{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+}
+.tabel-harga th, .tabel-harga td{
+  border: 1px solid rgb(85, 85, 85);
+  text-align: left;
+  padding: 15px;
+}
+ tr{
+  background-color: whitesmoke;
+  transition: all 0.4s;
+ }
+ tr:hover{
+  background-color: goldenrod;
+  transform: scale(1.02);
+}
+tbody tr:nth-child(even){
+ background-color: rgb(212, 208, 208);}
+tbody tr:nth-child(even):hover{
+  background-color: goldenrod;}
+h4{
+  font-size: 1.2rem;
+  text-align: center;
+  color: whitesmoke;
+}
+.form h2{
+  text-align: center; 
+  margin: 20px 0; 
+  font-size: 3rem; 
+  color: #133917;
+ }
+ .form{
+  text-align: center;
+  margin-top: 150px;
+ }
+ .form p{
+  margin: 20px;
+  font-size: 1.1rem;
+ }
+ .form-sewa{
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  padding: 30px 50px 30px 30px;
+  border-radius: 10px;
+  border: 2px solid black;
+ }
+ .form-group{
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: 500;
+ }
+ .form-group label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: rgb(58, 58, 58);}
+ .kirim, .reset{
+  margin-bottom: 5px;
+  font-size: 1rem;
+  background-color: goldenrod;
+  color: black;
+  border-radius: 10px;
+  padding: 8px 15px;  
+ }
+ .kirim:hover, .reset:hover{
+  padding: 12px;
+ }
+ .form-group textarea{
+ resize: none;
+ }
+ .form-group input, .form-group textarea, .form-group select{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #133917;
+  font-size: 1rem;
+  transition: all 0.4s;
+  color: black;
+}
+.form-group input:hover, .form-group textarea:hover,.form-group select:hover
+{
+  background-color: #133917;
+ color: whitesmoke;
+ border: 1px solid #133917;
+}
+.form p{
+  color: black;
+  font-size: 1rem;
+}
+
+ .containerimage{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ }
+.img1{
+  width: 220px;
+  background-color: #578524;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.705);
+  margin: 20px;
+}
+.img1 img{
+  width: 100%;
+  height: 100%;  
+  max-height: 200px;
+}
+.card-contentinf{
+  padding: 16px;
+  background-color: #578524;
+}
+
+.card-contentinf h3{
+  font-size: 28px;
+  text-align: center;
+  margin: 0;
+}
+.card-contentinf h4{
+  margin: 0;
+}
+.card-contentinf p{
+  font-size: 15px;
+  line-height: 1.3;
+  text-align: center;
+  color: whitesmoke;
+}
+.img1:hover{
+  transform: scale(1.1);
+}
+.img1{
+  transition: all 0.3s;
+}

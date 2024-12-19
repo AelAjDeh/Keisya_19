@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGreen.Cycle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+@media screen and (max-width: 768px) {
+  .welcome-text h1 {
+    font-size: 2rem; 
+    text-align: center;
+  }
+
+  .welcome-text p {
+    font-size: 1rem;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .welcome-text h1 {
+    font-size: 1.5rem; 
+    text-align: center;
+  }
+
+  .welcome-text p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+  <nav class="navigasi">
+    <div class="navbar">
+      <a href="asset/img/gogreen.svg" class="logo">EcoGreen<span style="color: goldenrod;">.Cycle</span></a>
+      <ul class="menu-navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="page/information.html">Information</a></li>
+      <li><a href="page/else.html">Program</a></li>
+      <li><a href="page/kritik.html">Kritik & Saran</a></li>
+
+      </ul>
+      <div class="tombol">&#9776;</div>
+    </div>
+  </nav>
+  <section class="welcome-section" id="welcome">
+    <div class="welcome-text">
+      <h1>
+        Welcome to EcoGreen.Cycle
+      </h1>
+      <p>
+        "Ubah sampahmu menjadi Harta 💰! dapatkan reward menarik untuk setiap kontribusi Anda!"
+      </p><br>
+      <a href="#about" class="btn-primary">More Information </a>
+    </div>
+  </section><br>
+  <section class="tentang" id="about">
+    <div class="tentang-text">
+      <h2><span style="color: rgb(21, 80, 21);">About</span> <br><span style="color: goldenrod;">EcoGreen.Cycle</span></h2>
+      <p><span style="font-weight: bold;">"EcoGreen.Cycle "</span> adalah bank sampah profesional yang terkenal akan kinerjanya yang andal dan terpercaya. Dengan harga ideal, layanan kami membantu mengelola sampah secara efisien dan ramah lingkungan, memberikan nilai ekonomis sekaligus menjaga kelestarian lingkungan.</p>
+    </div><br><br>
+    <div class="image">
+      <img src="asset/img/gogreen1.svg" alt="Car">
+    </div>
+  </section>
+  <br>
+  <br>
+  <section class="car" id="product" style=" background: linear-gradient(245.59deg,#4d9559 0%, #38703d 28.53%, #133917 75.52%);">
+    <h3 id="car-judul">Kategori Sampah</h3>
+    <div class="produk-container">
+      <div class="produk-card" id="card1">
+        <img src="asset/img/organik.svg" alt="Stress">
+        <h3>Sampah Organik </h3>
+        <a href="page/information.html"><button class="btn-primary">Informasi Lebih Lanjut</button></a>
+      </div>
+      <div class="produk-card" id="card2">
+        <img src="asset/img/anorganik.svg" alt="Stress">
+        <h3 style="color: black;">Sampah Anorganik</h3>
+        <a href="page/information.html"><button class="btn-primary">Informasi Lebih Lanjut</button></a>
+      </div>
+      
+    </div>
+    <br><br>
+  </section>
+
+  <br>
+  <br>
+  <box-icon type='solid' name='upvote' class="icon" size="lg"></box-icon>
+  <script type="text/javascript">
+    const tombol = document.querySelector(".tombol");
+    const menu = document.querySelector(".menu-navbar");
+
+    tombol.addEventListener("click",() =>{
+      menu.classList.toggle("aktif");
+      document.querySelector('#about').scrollIntoView({
+  behavior: 'smooth'
+});
+    });
+  </script>
+</body>
+</html>

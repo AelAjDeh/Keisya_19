@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGreen.Cycle</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+  .kritik-section h2{
+  text-align: center; 
+  margin: 20px 0;
+  font-size: 3rem; 
+  color: whitesmoke;
+}
+#form{
+  max-width:20cm ;
+  margin: 0 auto;
+  padding: 30px 50px 30px 30px;
+  border-radius: 10px;
+}
+#form{
+  text-align: center;
+  margin-top: 150px;
+ }
+ #form p{
+  margin: 20px;
+  font-size: 1.1rem;
+ }
+ #form{
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  padding: 30px 50px 30px 30px;
+  border-radius: 10px;
+  border: 2px solid black;
+ }
+ .field{
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: 500;
+ }
+ .field label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: rgb(58, 58, 58);}
+ #submit-button , #reset-button{
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 8px 20px;  
+  transition: all 0.3s;
+ }
+ #submit-button{
+  background-color: goldenrod;
+  color: black;
+ }
+ #reset-button{
+  background-color: #e21313;
+  color: black;
+ }
+ #submit-button:hover {
+transform: scale(1.1); 
+color: white;
+}
+#reset-button:hover{
+  transform: scale(1.1); 
+  color: white;
+}
+ .fieldtextarea{
+ resize: none;
+ }
+ .field input, .field textarea, .field select{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #133917;
+  font-size: 1rem;
+  transition: all 0.4s;
+  color: black;
+}
+.field input:hover, .field textarea:hover,.field select:hover
+{
+  background-color: #133917;
+ color: whitesmoke;
+ border: 1px solid #133917;
+}
+#form p{
+  color: black;
+  font-size: 1rem;
+}
+</style>
+</head>
+<body style="  background:linear-gradient(245.59deg,#4d9559 0%, #38703d 28.53%, #133917 75.52%);
+">
+  <nav class="navigasi">
+    <div class="navbar">
+      <a href="asset/img/gogreen.svg" class="logo">EcoGreen<span style="color: goldenrod;">.Cycle</span></a>
+      <ul class="menu-navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="information.html">Information</a></li>
+      <li><a href="else.html">Program</a></li>
+      <li><a href="#">Kritik & Saran</a></li>
+      </ul>
+      <div class="tombol">&#9776;</div>
+    </div>
+  </nav>
+  <section class="kritik-section" id="contact" style="margin-top: 150px;">
+    <h2>Kritik dan Saran </h2>
+    <form id="form" class="container m-4 pl-4" method="POST">
+      <div class="field">
+        <label class="label">Nama </label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Masukan nama anda (optional)"
+            name="nama"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Alamat Email</label>
+        <div class="control">
+          <input
+            class="input"
+            type="email"
+            placeholder="xxxx@gmail.com (optional)"
+            name="email"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Kritik dan Saran</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Isi Kritik / saran disini" name="kritik" required/>
+        </div>
+      </div>
+
+
+      <div class="field is-grouped" style="display: flex;justify-content: center; align-items: center;gap: 12px;">
+        <div class="control">
+          <button class="button is-primary" type="submit" id="submit-button">
+            Kirim 
+          </button>
+        </div>
+        <div class="control">
+          <button  id="reset-button" type="reset">Reset</button>
+        </div>
+      </div>
+    </form>
+    <div
+      id="message"
+      style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "
+    ></div>
+<br><br><br>
+    <script>
+      document.getElementById("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        document.getElementById("message").textContent = "Submitting..";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("submit-button").disabled = true;
+
+        // Collect the form data
+        var formData = new FormData(this);
+        var keyValuePairs = [];
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+        }
+
+        var formDataString = keyValuePairs.join("&");
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbw63WM5zVN4redSw-qwK8TUk_iDeT068Nr8brrl9UR8toKzU9fJdgAWQZNVwJIkoB10/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            if (response) {
+              return response; 
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message
+            document.getElementById("message").textContent =
+              "Data submitted successfully!";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            console.error(error);
+            document.getElementById("message").textContent =
+              "An error occurred while submitting the form.";
+            document.getElementById("message").style.display = "block";
+          });
+      });
+    </script> <box-icon type='solid' name='upvote' class="icon" size="lg"></box-icon>
+  <script type="text/javascript">
+    const tombol = document.querySelector(".tombol");
+    const menu = document.querySelector(".menu-navbar");
+
+    tombol.addEventListener("click",() =>{
+      menu.classList.toggle("aktif");
+      document.querySelector('#about').scrollIntoView({
+  behavior: 'smooth'
+});
+    });
+  </script>
+
+  </body>
+</html>
